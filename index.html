@@ -19,6 +19,9 @@ document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '2023399475193212');
 fbq('track', 'PageView');
 </script>
+<!-- Calendly -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <style>
 :root{
 --navy:#081c33;--navy2:#0d2b4d;--ink:#16202e;--body:#46566a;
@@ -41,7 +44,7 @@ background:linear-gradient(110deg,rgba(5,18,34,.93) 0%,rgba(8,28,51,.78) 45%,rgb
 .hero .eyebrow{color:var(--gold-l)}
 .hero h1{color:#fff;font-size:clamp(34px,5.4vw,62px);font-weight:800;max-width:760px;margin-bottom:22px}
 .hero h1 em{font-style:normal;color:var(--gold-l)}
-.hero p.sub{font-size:clamp(16px,2vw,20px);color:#cfdaе8;color:#cfdae8;max-width:600px;margin-bottom:36px;font-weight:400}
+.hero p.sub{font-size:clamp(16px,2vw,20px);color:#cfdae8;max-width:600px;margin-bottom:36px;font-weight:400}
 .cta-row{display:flex;flex-wrap:wrap;gap:14px}
 .btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:16px;padding:16px 32px;border-radius:12px;text-decoration:none;transition:.25s;border:0;cursor:pointer}
 .btn.gold{background:linear-gradient(135deg,var(--gold),var(--gold-l));color:var(--navy)}
@@ -120,25 +123,19 @@ h2{font-size:clamp(26px,3.6vw,40px);font-weight:800;margin-bottom:14px}
 .faq details[open] summary:after{content:"–"}
 .faq p{padding-top:12px;font-size:15px;color:var(--body)}
 
-/* CONTACT */
-.contact{background:linear-gradient(160deg,var(--navy) 0%,#0a3151 100%);color:#fff}
-.contact .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:54px;align-items:start}
-@media(max-width:860px){.contact .grid{grid-template-columns:1fr}}
-.contact h2{color:#fff}
-.contact .pitch p{color:#aebdd0;font-size:16px;margin-bottom:22px}
-.contact .pitch .owner{display:flex;align-items:center;gap:14px;margin-top:30px;padding-top:26px;border-top:1px solid rgba(255,255,255,.14)}
-.contact .pitch .owner .av{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-l));display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--navy);font-size:19px}
-.contact .pitch .owner b{display:block;color:#fff}
-.contact .pitch .owner span{font-size:13px;color:#9fb2c8}
-form{background:#fff;border-radius:var(--r);padding:38px 34px;box-shadow:0 30px 80px rgba(0,0,0,.35)}
-form h3{font-size:20px;margin-bottom:4px}
-form .fs{font-size:13.5px;color:var(--body);margin-bottom:18px}
-label{display:block;font-size:12.5px;font-weight:700;margin:16px 0 6px;color:var(--navy);letter-spacing:.03em;text-transform:uppercase}
-input,select,textarea{width:100%;padding:13px 14px;border:1.5px solid var(--line);border-radius:10px;font-size:15px;font-family:inherit;color:var(--ink);background:#fbfcfe;transition:.2s}
-input:focus,select:focus,textarea:focus{outline:0;border-color:var(--aqua);background:#fff}
-form button{width:100%;margin-top:24px;background:linear-gradient(135deg,var(--gold),var(--gold-l));color:var(--navy);border:0;padding:17px;font-size:16.5px;font-weight:800;border-radius:12px;cursor:pointer;transition:.25s;font-family:inherit}
-form button:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(201,162,39,.45)}
-form .micro{font-size:12.5px;color:var(--body);text-align:center;margin-top:14px}
+/* CALENDLY SECTION (replaces form) */
+.calendly-section{background:linear-gradient(160deg,var(--navy) 0%,#0a3151 100%);color:#fff}
+.calendly-section .grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+@media(max-width:860px){.calendly-section .grid{grid-template-columns:1fr}}
+.calendly-section h2{color:#fff}
+.calendly-section .pitch p{color:#aebdd0;font-size:16px;margin-bottom:22px}
+.calendly-section .pitch .owner{display:flex;align-items:center;gap:14px;margin-top:30px;padding-top:26px;border-top:1px solid rgba(255,255,255,.14)}
+.calendly-section .pitch .owner .av{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-l));display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--navy);font-size:19px}
+.calendly-section .pitch .owner b{display:block;color:#fff}
+.calendly-section .pitch .owner span{font-size:13px;color:#9fb2c8}
+.calendly-box{background:#fff;border-radius:var(--r);padding:20px;box-shadow:0 30px 80px rgba(0,0,0,.35);min-height:620px;overflow:hidden}
+.calendly-box .calendly-inline-widget{min-width:320px;height:600px}
+@media(max-width:860px){.calendly-box{min-height:700px}.calendly-box .calendly-inline-widget{height:680px}}
 
 footer{background:#051221;color:#7f93ab;font-size:12.5px;padding:36px 0;text-align:center;line-height:1.8}
 footer a{color:#b7c6d9;text-decoration:none}
@@ -152,8 +149,8 @@ footer a{color:#b7c6d9;text-decoration:none}
 <h1>Own — or partner in — a business that <em>already makes money</em> on Biscayne Bay</h1>
 <p class="sub">Licensed jet ski rental operation with bank-verified financials, an 8-unit late-model fleet, and a rare Miami-Dade livery permit. Direct from the owner.</p>
 <div class="cta-row">
-<a class="btn gold" href="#offers">View the Opportunity</a>
-<a class="btn ghost" href="#contact">Request the Package</a>
+<a class="btn gold" href="#book" onclick="fbq('track','Schedule',{content_name:'hero_book'})">📅 Book a Call</a>
+<a class="btn ghost" href="#offers">View the Opportunity</a>
 </div>
 <div class="trust"><span><b>464</b> bookings in 2025</span><span><b>1,260</b> reconciled bank records</span><span><b>E-2</b> visa qualified</span><span><b>No brokers</b> — owner direct</span></div>
 </div>
@@ -174,17 +171,17 @@ footer a{color:#b7c6d9;text-decoration:none}
 <p class="lede">Tourists come to Miami Beach and want to ride the water. This business rents them jet skis — legally, safely, and profitably — from a waterfront spot on Biscayne Bay.</p></div>
 <div class="feat" style="margin-top:10px">
 <div class="f" style="background:var(--mist);border:1px solid var(--line)">
-<svg viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>
+<svg viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.8"><circle cx="12" cy="12" r="9"></circle><path d="M8 12h8M12 8v8"></path></svg>
 <h3 style="color:var(--navy)">How it makes money</h3>
 <p style="color:var(--body)">Guests book online, via Instagram, or walk up. They sign a digital waiver, get a safety briefing, and ride 1–3 hours. Average revenue: <b>~$142 per ski-hour</b>. In 2025 that was 464 bookings and 1,534 rental hours — $258K of bank-verified revenue at ~40% margins.</p>
 </div>
 <div class="f" style="background:var(--mist);border:1px solid var(--line)">
-<svg viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg>
+<svg viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path></svg>
 <h3 style="color:var(--navy)">Who runs it day to day</h3>
 <p style="color:var(--body)">A small trained team handles check-ins, briefings, fueling and supervision. Booking, CRM, waivers and GPS tracking are automated. The owner's role is marketing, finance and growth — <b>nobody needs to stand on the dock all day</b>, including you.</p>
 </div>
 <div class="f" style="background:var(--mist);border:1px solid var(--line)">
-<svg viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.8"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+<svg viewBox="0 0 24 24" fill="none" stroke="#c9a227" stroke-width="1.8"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
 <h3 style="color:var(--navy)">Where and what you get</h3>
 <p style="color:var(--body)">Waterfront operating point in Miami Beach (dock arrangement ~$2K/month, transfers with the deal). The hard assets: <b>8 late-model jet skis</b>, trailer, floating docks. The hard-to-get part: an <b>active FWC livery permit</b> — Miami-Dade barely issues new ones.</p>
 </div>
@@ -196,7 +193,7 @@ footer a{color:#b7c6d9;text-decoration:none}
 <div class="wrap">
 <div class="center"><span class="eyebrow">Two Ways In</span>
 <h2>Choose your seat at the table</h2>
-<p class="lede">Buy the whole operation and run it — or bring capital, keep the founder operating, and collect distributions.</p></div>
+<p class="lede">Buy the whole operation and run it — or bring capital, keep the founder operating, and collect distributions. Either way, start with a 15-minute call.</p></div>
 <div class="cards">
 <div class="card">
 <h3>Full Acquisition</h3>
@@ -210,7 +207,7 @@ footer a{color:#b7c6d9;text-decoration:none}
 <li>90-day hands-on training + 60 days of support</li>
 <li>Seller financing available for qualified buyers</li>
 </ul>
-<a class="btn navy" href="#contact" onclick="fbq('track','Lead',{content_name:'buy'})">Request Full Package</a>
+<a class="btn navy" href="#book" onclick="fbq('track','Schedule',{content_name:'buy'})">📅 Book a Call — Full Acquisition</a>
 </div>
 <div class="card dark">
 <span class="badge">Founder Stays On</span>
@@ -225,7 +222,7 @@ footer a{color:#b7c6d9;text-decoration:none}
 <li>Growth plan in motion: OTA channels, hotel partnerships, 2nd location</li>
 <li>Operating agreement with minority protections, monthly reporting</li>
 </ul>
-<a class="btn gold" href="#contact" onclick="fbq('track','Lead',{content_name:'invest'})">Discuss Partnership</a>
+<a class="btn gold" href="#book" onclick="fbq('track','Schedule',{content_name:'invest'})">📅 Book a Call — Partnership</a>
 </div>
 </div>
 <p class="note">Historical figures are not a guarantee of future results. Full documentation under NDA.</p>
@@ -238,7 +235,7 @@ footer a{color:#b7c6d9;text-decoration:none}
 <h2>How the deal works</h2>
 <p class="lede">Data room is ready today. Cash transactions close in 3–6 weeks; E-2 structures follow the visa timeline with funds protected in escrow.</p></div>
 <div class="steps">
-<div class="step"><b>Intro call</b><p>15 minutes with the owner — fit, questions, your goal: ownership, yield, or E-2.</p></div>
+<div class="step"><b>Book a call</b><p>15-minute Zoom with the owner. Pick your slot → instant confirmation. No forms, no waiting.</p></div>
 <div class="step"><b>NDA → data room</b><p>Transaction-level P&L, monthly bank statements, permits, fleet schedule, tax records.</p></div>
 <div class="step"><b>Site visit</b><p>See the operation, the fleet and the waterfront location in Miami Beach.</p></div>
 <div class="step"><b>Structure & close</b><p>Escrow with deal counsel. E-2 buyers: closing contingent on visa approval.</p></div>
@@ -252,15 +249,15 @@ footer a{color:#b7c6d9;text-decoration:none}
 <h2>Built on things competitors can't copy</h2></div>
 <div class="feat" style="margin-top:46px">
 <div class="f">
-<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
 <h3>A real regulatory moat</h3><p>The FWC Livery Permit is mandatory for watercraft rental in Florida — and new permits are heavily restricted in Miami-Dade. Licensed and insured beats informal operators every season.</p>
 </div>
 <div class="f">
-<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 3 5-6"/></svg>
+<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 3v18h18"></path><path d="M7 14l4-4 4 3 5-6"></path></svg>
 <h3>Documented, not promised</h3><p>464 bookings and 1,260 reconciled bank transactions in 2025. Deposits up 24% YoY in 2026 — May alone +89%. Every number ties to a bank statement you can inspect.</p>
 </div>
 <div class="f">
-<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+<svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>
 <h3>Upside still on the shelf</h3><p>Fleet just expanded 6 → 8 late-model units. Viator, GetYourGuide and hotel partnerships haven't been switched on yet. A realistic path to $500K+ revenue at current unit economics.</p>
 </div>
 </div>
@@ -282,47 +279,26 @@ footer a{color:#b7c6d9;text-decoration:none}
 </div>
 </section>
 
-<section class="contact" id="contact">
+<!-- CALENDLY SECTION — replaces form -->
+<section class="calendly-section" id="book">
 <div class="wrap">
 <div class="grid">
 <div class="pitch">
-<span class="eyebrow">No Brokers · No Pressure</span>
-<h2>Talk directly to the owner</h2>
-<p>You'll get the full package — transaction-verified P&L, bank statements, fleet schedule, permit documentation — under a simple NDA. Then a call, then a site visit if it fits.</p>
+<span class="eyebrow">Book Directly · No Forms</span>
+<h2>Schedule your 15-minute intro call</h2>
+<p>Pick a time that works for you — instant confirmation. We'll connect on Zoom, discuss your goals (acquisition, partnership, or E-2), and I'll send the full package under NDA.</p>
 <p>One follow-up if I don't hear back. That's it.</p>
 <div class="owner">
 <div class="av">DH</div>
 <div><b>Dmytro Honchar</b><span>Founder & Operator · Miami Beach<br>+1 786-863-1721 · ceo@gonchar.group</span></div>
 </div>
 </div>
-<form action="https://formsubmit.co/ceo@gonchar.group" method="POST">
-<input type="hidden" name="_subject" value="🌊 LANDING LEAD — Miami Watersports Opportunity">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_next" value="https://ceogonchar.github.io/miami-business-opportunity/thanks.html">
-<h3>Request the package</h3>
-<div class="fs">Reply within hours, directly from the owner.</div>
-<label>Name *</label><input name="name" required placeholder="Your name">
-<label>Email *</label><input type="email" name="email" required placeholder="you@email.com">
-<label>Phone / WhatsApp</label><input name="phone" placeholder="+1 …">
-<label>I'm interested in *</label>
-<select name="interest" required>
-<option value="">Choose…</option>
-<option>Full acquisition ($400K)</option>
-<option>Partnership ($300K)</option>
-<option>E-2 visa path (either)</option>
-<option>Not sure yet — tell me more</option>
-</select>
-<label>Available capital</label>
-<select name="capital">
-<option>$300K–$400K+ ready</option>
-<option>$150K–$300K</option>
-<option>Financing needed</option>
-<option>Prefer not to say</option>
-</select>
-<label>Anything else?</label><textarea name="message" rows="3" placeholder="Timeline, questions, your situation…"></textarea>
-<button type="submit" onclick="fbq('track','SubmitApplication')">Send my request</button>
-<div class="micro">Direct to the owner's inbox. No spam, no list, no brokers.</div>
-</form>
+<div class="calendly-box">
+<div class="calendly-inline-widget" 
+     data-url="https://calendly.com/gonchargroup/jetski-miami-buyer-investor-intro-call?hide_gdpr_banner=1&background_color=ffffff&text_color=16202e&primary_color=c9a227"
+     style="min-width:320px;height:600px;">
+</div>
+</div>
 </div>
 </div>
 </section>
@@ -334,5 +310,12 @@ This page is informational only and does not constitute an offer to sell securit
 <a href="mailto:ceo@gonchar.group">ceo@gonchar.group</a> · +1 786-863-1721
 </div>
 </footer>
+
+<!-- Calendly popup for external link opening -->
+<script>
+Calendly.initPopupWidget({
+  url: 'https://calendly.com/gonchargroup/jetski-miami-buyer-investor-intro-call?hide_gdpr_banner=1'
+});
+</script>
 </body>
 </html>
